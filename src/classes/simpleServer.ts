@@ -16,7 +16,6 @@ export class SimpleWsServer extends WebSocketServer {
     }
 
     pushConnection(ws: WebSocket, request: IncomingMessage) {
-        ws.send("ola cliente, seja bem vindo")
         this._connections++
         ws.on("close", () => {
             this._connections--
