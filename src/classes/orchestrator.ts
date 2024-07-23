@@ -31,7 +31,7 @@ export class Orchestrator extends WebSocketServer {
 
     private async unableToRedirect(ws: WebSocket, request: IncomingMessage) {
         let attempts = 0;
-        const maxAttempts = 10; // Set a limit for attempts
+        const maxAttempts = 10;
         while (attempts < maxAttempts) {
             attempts++;
             const port = this.randomPort();
